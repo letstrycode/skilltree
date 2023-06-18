@@ -11,7 +11,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: process.env.ADAPTER === 'production' ? adapterVercel() : adapterNode()
+		adapter: process.env.DEVELOPMENT_MODE === 'false' ? adapterVercel() : adapterNode()
 	}
 };
 
